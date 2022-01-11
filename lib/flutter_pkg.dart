@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 /// A Calculator.
-class KeyboardAvoider extends StatefulWidget {
+class KeyboardAvoiderPkg extends StatefulWidget {
   /// The child to embed. If the [child] is not a [ScrollView], it is automatically embedded in a [SingleChildScrollView].
   /// If the [child] is a [ScrollView], it must have a [ScrollController].
   final Widget child;
@@ -26,7 +26,7 @@ class KeyboardAvoider extends StatefulWidget {
   /// Useful in case the focused widget is inside a parent widget that you also want to be visible.
   final double focusPadding;
 
-  KeyboardAvoider({
+  KeyboardAvoiderPkg({
     Key? key,
     required this.child,
     this.duration = const Duration(milliseconds: 100),
@@ -35,10 +35,10 @@ class KeyboardAvoider extends StatefulWidget {
     this.focusPadding = 12.0,
   });
   @override
-  _KeyboardAvoiderState createState() => _KeyboardAvoiderState();
+  _KeyboardAvoiderPkgState createState() => _KeyboardAvoiderPkgState();
 }
 
-class _KeyboardAvoiderState extends State<KeyboardAvoider>
+class _KeyboardAvoiderPkgState extends State<KeyboardAvoiderPkg>
     with WidgetsBindingObserver {
   final _animationKey = GlobalKey<ImplicitlyAnimatedWidgetState>();
   late Function(AnimationStatus) _animationListener;
